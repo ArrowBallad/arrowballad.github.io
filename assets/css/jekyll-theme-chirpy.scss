@@ -51,3 +51,52 @@ h1, h2, h3, h4, h5, h6 {
 .content code {
   font-size: 0.88rem;
 }
+
+/* restrained purple theme */
+:root[data-bs-theme="light"] {
+  --main-bg: #f3f0f7;
+  --sidebar-bg: #e6e0ee;
+  --card-bg: #fbf9fd;
+  --text-color: #4b4453;
+  --heading-color: #2f2a36;
+  --link-color: #6f5a8d;
+  --link-underline-color: #b9abc9;
+  --btn-border-color: #d6cde2;
+  --main-border-color: #ddd6e7;
+  --topbar-bg: rgba(243, 240, 247, 0.92);
+  --toc-highlight: #7a6398;
+}
+
+:root[data-bs-theme="dark"] {
+  --main-bg: #1b1821;
+  --sidebar-bg: #221e2a;
+  --card-bg: #2a2533;
+  --text-color: #d8d1e4;
+  --heading-color: #f1ebfa;
+  --link-color: #b39ad6;
+  --link-underline-color: #7d699b;
+  --btn-border-color: #4c4359;
+  --main-border-color: #3b3545;
+  --topbar-bg: rgba(27, 24, 33, 0.92);
+  --toc-highlight: #c4afe4;
+}
+
+/* 标题稍微更有气质一点 */
+#post h1,
+.content h1,
+.content h2,
+.content h3 {
+  color: var(--heading-color);
+}
+
+/* 链接更柔和 */
+.content a:not(.img-link) {
+  text-decoration-color: var(--link-underline-color);
+}
+
+/* 引用块 */
+.content blockquote {
+  background: rgba(111, 90, 141, 0.08);
+  border-left: 3px solid #8a74aa;
+  border-radius: 0 6px 6px 0;
+}
