@@ -1,0 +1,53 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+
+/* 字体：优先使用系统字体，不额外下载字体 */
+body,
+h1, h2, h3, h4, h5, h6 {
+  font-family:
+    "Segoe UI",
+    "PingFang SC",
+    "Microsoft YaHei",
+    "Noto Sans CJK SC",
+    sans-serif;
+}
+
+/* 正文字号 */
+.content {
+  font-size: 0.96rem;
+  line-height: 1.8;
+}
+
+/* 文章标题 */
+#post h1 {
+  font-size: 1.85rem;
+}
+
+/* 正文小标题 */
+.content h2 {
+  font-size: 1.4rem;
+}
+
+.content h3 {
+  font-size: 1.18rem;
+}
+
+/* 代码字号 */
+.content pre,
+.content code {
+  font-size: 0.88rem;
+}
